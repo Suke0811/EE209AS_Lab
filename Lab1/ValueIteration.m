@@ -94,8 +94,9 @@ classdef ValueIteration
             %do_while loop
             while(true)
                 %cal current value and policy
+                tic
                 [Vcur,Pie] = obj.calcValueAndPolicy(obj.Vpre);
-                
+                tac
                 %loop exit condition
                 if(abs(Vcur - obj.Vpre) < tolerance)
                     break;

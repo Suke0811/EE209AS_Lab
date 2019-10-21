@@ -172,8 +172,9 @@ classdef PolilcyIteration
             %do_while loop
             while(true)
                 %cal current value and policy
+                tic
                 [Vcur,Pie] = obj.calcValueAndPolicy(obj.Vpre,obj.PiePrev);
-                
+                tac
                 %loop exit condition
                 if(Pie == obj.PiePrev)
                     break;
